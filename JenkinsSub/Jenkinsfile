@@ -38,7 +38,8 @@ pipeline {
         stage ('Build') {
             steps {
                 dir("JenkinsSub"){
-                    bat 'mvn -X clean install exec:java -Dexec.mainClass="com.Application" -Dexec.classpathScope=test -e'
+                    bat 'mvn '+
+                    'exec:java -Dexec.mainClass="com.Application"'
                 }
             }
         }
