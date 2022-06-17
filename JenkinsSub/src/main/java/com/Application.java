@@ -9,6 +9,7 @@ public class Application {
     public static void main(String[] args) {
 
         String basePath = new File(System.getProperty("user.dir")).getAbsolutePath();
+        System.out.println(basePath);
         if(!Files.exists(Paths.get(basePath+"\\out\\test.txt"))){
             basePath = new File(basePath).getParent();
         }
